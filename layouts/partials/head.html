@@ -8,6 +8,7 @@
     <meta property="og:type" content="article">
 
     {{ template "_internal/opengraph.html" . }}
+    {{ template "_internal/twitter_cards.html" . }}
 
     {{ if .Params.thumbnail }}
     <meta property="og:image" content="{{ .Site.BaseURL }}{{ .Params.thumbnail }}">
