@@ -1,5 +1,4 @@
 {{- $gameTitle := .Get "gameTitle" -}}
-{{- $buildURL := .Get "buildURL" -}}
 {{- $buildFileName := .Get "buildFileName" -}}
 
 <div>
@@ -23,12 +22,11 @@
 </div>
 
 <script>
-    var buildUrl = "{{ $buildURL }}";
-    var loaderUrl = buildUrl + "/{{ $buildFileName }}.loader.js";
+    var loaderUrl = "/{{ $buildFileName }}.loader.js";
     var config = {
-        dataUrl: buildUrl + "/{{ $buildFileName }}.data",
-        frameworkUrl: buildUrl + "/{{ $buildFileName }}.framework.js",
-        codeUrl: buildUrl + "/{{ $buildFileName }}.wasm",
+        dataUrl: "/{{ $buildFileName }}.data",
+        frameworkUrl: "/{{ $buildFileName }}.framework.js",
+        codeUrl: "/{{ $buildFileName }}.wasm",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "Vitor Cantão",
         productName: "Character Movement",
@@ -73,8 +71,6 @@
 </script>
 
 <style>
-    #unity-container.unity-desktop {}
-
     #unity-container.unity-mobile {
         width: 100%;
         height: 100%;
@@ -99,21 +95,21 @@
     #unity-logo {
         width: 154px;
         height: 130px;
-        background: url("../../img/unity-logo-dark.png") no-repeat center;
+        background: url("img/unity-logo-dark.png") no-repeat center;
     }
 
     #unity-progress-bar-empty {
         width: 141px;
         height: 18px;
         margin-top: 10px;
-        background: url("../../img/progress-bar-empty-dark.png") no-repeat center;
+        background: url("img/progress-bar-empty-dark.png") no-repeat center;
     }
 
     #unity-progress-bar-full {
         width: 0%;
         height: 18px;
         margin-top: 10px;
-        background: url("../../img/progress-bar-full-dark.png") no-repeat center;
+        background: url("img/progress-bar-full-dark.png") no-repeat center;
     }
 
     #unity-footer {
@@ -128,7 +124,7 @@
         float: left;
         width: 204px;
         height: 38px;
-        background: url("../../img/webgl-logo.png") no-repeat center;
+        background: url("img/webgl-logo.png") no-repeat center;
     }
 
     #unity-build-title {
@@ -143,7 +139,7 @@
         float: left;
         width: 38px;
         height: 38px;
-        background: url("../../img/fullscreen-button.png") no-repeat center;
+        background: url("img/fullscreen-button.png") no-repeat center;
     }
 
     #unity-mobile-warning {
